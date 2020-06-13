@@ -5,8 +5,8 @@
             <v-container  class="text-center">
                 <h2 class="text-sm-h3 text-md-h2 text-xl-h1 mb-3">{{title}}</h2>
                 <v-responsive class="mx-auto mb-8" style="width: 56px">
-                    <v-divider class="mb-2"></v-divider>
-                    <v-divider></v-divider>
+                    <v-divider :class="'mb-2 ' + dark" ></v-divider>
+                    <v-divider :class="dark"></v-divider>
                 </v-responsive>
                 <slot></slot>
             </v-container>
@@ -20,7 +20,8 @@
         props: {
 			title: String,
             id: String,
-            styles: String
+            styles: String,
+            dark: String
         }
 	}
 </script>
